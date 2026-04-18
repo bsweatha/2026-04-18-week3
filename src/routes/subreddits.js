@@ -6,6 +6,10 @@ import {
 } from '../controllers/subredditController.js';
 
 const router = express.Router();
+// get the subreddits from the database and send them as a JSON response
+router.get('/', getAllSubreddits);
+router.post('/', createSubreddit);
+router.get('/:id', getSubredditWithThreads);
 
 /**
  * TODO: Register the following three routes using the imported controller functions:
